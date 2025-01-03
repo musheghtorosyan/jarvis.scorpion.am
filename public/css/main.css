@@ -1,0 +1,131 @@
+:root {
+  --black: #000000;
+  --dark: #0a0a0a;
+  --white: #ffffff;
+  --white01: rgba(255,255,255,0.05);
+  --white02: rgba(255,255,255,0.1);
+  --white03: rgba(255,255,255,0.15);
+  --lime: #3BFE00;
+  --darkgreen: darkgreen;
+  --red: red;
+}
+body {
+	margin: 0;
+	background-color: var(--dark);
+	color: var(--white);
+	font-family: verdana;
+}
+header {
+	position: fixed;
+	left: 0;
+	width: 260px;
+	top: 0;
+	bottom: 0;
+	background-color: var(--black);
+	color: var(--white);
+	padding:10px;
+	box-sizing: border-box;
+}
+main {
+	padding: 10px;
+	padding-left: 270px;
+}
+a {
+	color: var(--lime);
+	text-decoration: none;
+}
+h1 {
+	margin-top: 0;
+}
+.menu {
+	display: block;
+	padding: 10px 0;
+	border-bottom: 1px dashed var(--lime);
+}
+.list {
+	height: 30px;
+	line-height: 30px;
+	padding-right: 15px;
+	font-size: 14px;
+}
+.list:nth-child(2n-1){
+	background-color: var(--white01);
+}
+.list:nth-child(2n){
+	background-color: var(--white03);
+}
+.list button {
+	float: right;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.list:hover {
+	background-color: var(--lime);
+	color: var(--black);
+	cursor: pointer;
+}
+.done {
+	opacity: 0.2;
+	cursor: none;
+}
+.index {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	border-right: 2px solid var(--dark);
+}
+.section {
+/*	margin: 0 -10px;*/
+}
+.label {
+	display: inline-block;
+	padding: 0 6px;
+	float: left;
+	margin-right: 5px;
+	height: 24px;
+	line-height: 24px;
+	box-sizing: border-box;
+	margin-top: 3px;
+	width: 100px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: right;
+}
+.label svg {
+	width: 12px;
+	height: 12px;
+	float: right;
+	margin-top: 6px;
+	padding-left: 6px;
+}
+.in {
+	background: var(--darkgreen);
+}
+.out {
+	background: var(--red);
+}
+small {
+	color: var(--white);
+}
+
+
+@media(max-width:800px){
+	header{
+		position: static;
+		width: 100%;
+	}
+	main {
+		padding-left: 10px;
+	}
+	.task-name {
+		max-width: 240px;
+		overflow: hidden;
+		display: block;
+		float: left;
+		height: 30px;
+	}
+}
